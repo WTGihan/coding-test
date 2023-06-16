@@ -1,0 +1,236 @@
+.resturant-description {
+  max-width: 1920px;
+  width: calc(100% - 2 * 32px);
+  padding: 0 32px;
+  border-bottom: 1px solid #00000014;
+  padding-bottom: 32px;
+
+  .back-navigation {
+    display: inline-flex;
+    padding-top: 16px;
+
+    .back-navigation-icon {
+      fill: #00b8a9;
+      width: 24px;
+      height: 24px;
+    }
+
+    .back-navigation-title {
+      color: #00b8a9;
+      font-size: 16px;
+      line-height: 22px;
+      cursor: pointer;
+      display: flex;
+      align-items: end;
+      padding-left: 15px;
+    }
+
+    .anticon-arrow-left {
+      color: #00b8a9;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .resturant-body {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+
+    .resturant-main-container {
+      display: flex;
+      flex-direction: row;
+      width: 70%;
+
+      .resturant-container-img {
+        background-image: url(https://rs-menus-api.roocdn.com/images/854f3839-097c-4dab-aa93-945f662859b1/image.jpeg?width=370&height=244&auto=webp&format=jpg&fit=crop);
+        background-size: cover;
+        width: 35%;
+        background-position: 50%;
+      }
+
+      .resturant-details-container {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        padding-left: 26px;
+
+        .main-title {
+          color: #2e3333;
+          font-size: 40px;
+          line-height: 48px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        .sub-title-one {
+          padding-top: 8px;
+          color: #2e3333;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 400;
+          font-family: "IBM Plex Sans", sans-serif;
+
+          .sub-title-dot-icon {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+
+        .sub-title-two {
+          padding-top: 8px;
+          color: #585c5c;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 400;
+          font-family: "IBM Plex Sans", sans-serif;
+
+          .sub-title-dot-icon {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+        }
+
+        .info-tab {
+          padding-top: 16px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .info-tab-icon-one {
+            fill: #abadad;
+            padding: 10px;
+            width: 24px;
+            height: 24px;
+          }
+
+          .info-tab-title {
+            .info-tab-title-one {
+              color: #2e3333;
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 400;
+              font-family: "IBM Plex Sans", sans-serif;
+            }
+
+            .info-tab-title-two {
+              color: #585c5c;
+              font-size: 14px;
+              line-height: 19px;
+              font-weight: 400;
+              font-family: "IBM Plex Sans", sans-serif;
+            }
+          }
+
+          .info-tab-icon-two {
+            fill: #00ccbc;
+            padding-left: 14px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .rating-tab {
+          padding-top: 16px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .rating-tab-icon-one {
+            fill: #4d7c1b;
+            padding: 10px;
+            width: 24px;
+            height: 24px;
+          }
+
+          .rating-tab-title {
+            .rating-tab-title-one {
+              color: #4d7c1b;
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 400;
+              font-family: "IBM Plex Sans", sans-serif;
+            }
+
+            .rating-tab-title-two {
+              color: #585c5c;
+              font-size: 14px;
+              line-height: 19px;
+              font-weight: 400;
+              font-family: "IBM Plex Sans", sans-serif;
+            }
+          }
+
+          .rating-tab-icon-two {
+            fill: #00ccbc;
+            padding-left: 14px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .resturant-sub-container {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      align-items: flex-end;
+
+      .resturant-sub-container-title {
+        display: flex;
+        flex-direction: row;
+
+        .resturant-sub-container-title-icon {
+          height: 24px !important;
+          width: 24px !important;
+        }
+
+        .resturant-sub-container-title-one {
+          font-size: 16px;
+          line-height: 22px;
+          font-family: "IBM Plex Sans", sans-serif;
+          font-weight: 400;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .resturant-sub-container-title-two {
+          font-size: 16px;
+          line-height: 22px;
+          font-family: "IBM Plex Sans", sans-serif;
+          font-weight: 400;
+          color: #00b8a9;
+        }
+      }
+
+      .resturant-sub-container-button {
+        padding-top: 16px;
+
+        .resturant-sub-container-button-icon {
+          height: 18px;
+          width: 18px;
+          fill: #00b8a9;
+          padding-right: 6px;
+        }
+
+        .group-button {
+          line-height: 22px;
+          border: 1px solid #e8ebeb;
+          background-color: #fff;
+          color: #2e3333;
+          font-weight: 400;
+          min-height: 40px;
+          padding: 8px 16px;
+          font-size: 16px;
+          border-radius: 4px;
+          font-family: "IBM Plex Sans", sans-serif;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

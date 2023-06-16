@@ -1,0 +1,103 @@
+.container {
+  /* Have to define */
+}
+
+.footer-container {
+  background-color: #2e3333;
+
+  .footer-main-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px;
+    overflow: hidden;
+
+    .footer-container-list {
+      display: flex;
+      flex-direction: row;
+
+      .footer-box {
+        padding: 24px;
+        min-width: 224px;
+        background: hsla(0, 0%, 100%, 0.1);
+        border-radius: 3px;
+        height: auto;
+        margin-bottom: 24px;
+        margin-top: 24px;
+        margin-left: 10px;
+
+        .footer-box-title {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 700;
+          color: #fff;
+          padding-bottom: 8px;
+        }
+
+        .footer-box-ul {
+          list-style-type: none;
+          padding: 0px;
+
+          .footer-box-ul-item {
+            font-size: 14px;
+            line-height: 19px;
+            color: #fff;
+            margin-top: 8px;
+            cursor: pointer;
+          }
+
+          .footer-box-ul-item:hover {
+            color: #00b8a9;
+          }
+
+          .footer-box-ul-item-img-one {
+            .footer-box-ul-item-img-app-store {
+              background-image: url("https://consumer-component-library.roocdn.com/26.19.2/static/images/app-store-badges-en.svg");
+              width: 135px;
+              height: 40px;
+              display: inline-block;
+              text-indent: -9999px;
+              background-repeat: no-repeat;
+              background-size: 270px 40px;
+            }
+          }
+
+          .footer-box-ul-item-img-two {
+            padding-top: 16px;
+            padding-bottom: 16px;
+
+            .footer-box-ul-item-img-play-store {
+              background-image: url("https://consumer-component-library.roocdn.com/26.19.2/static/images/app-store-badges-en.svg");
+              width: 135px;
+              height: 40px;
+              display: inline-block;
+              text-indent: -9999px;
+              background-repeat: no-repeat;
+              background-size: 270px 40px;
+              background-position: -135px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-sub-container {
+      margin-left: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .footer-social {
+        .footer-social-link {
+          width: 24px;
+          height: 24px;
+          fill: #fff;
+          margin-right: 15px;
+        }
+      }
+
+      .footer-rights {
+        color: #585c5c;
+      }
+    }
+  }
+}
