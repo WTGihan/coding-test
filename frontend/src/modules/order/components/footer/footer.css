@@ -83,6 +83,7 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 16px;
 
       .footer-social {
         .footer-social-link {
