@@ -19,11 +19,10 @@ export const findMenu = async (req: any, res: any) => {
 
 export const findMenuWithDishes = async (req: any, res: any) => {
   try {
-    const valid = validateSchema(MenuSchema.getMenuWithDishes, req.body);
-    if (!valid) {
+    const { resturant_id } = req.query;
+    if (!resturant_id) {
       return res.status(400).send({ message: "Missing restaurant ID" });
     }
-    const resturant_id = req.body.resturant_id;
     const menuResult = await Menu.findAll({
       where: { resturant_id: resturant_id },
     });

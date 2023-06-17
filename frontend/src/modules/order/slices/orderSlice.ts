@@ -44,12 +44,12 @@ export const { getAllOrderInProgress, getAllOrderSuccess, getAllOrderFailed } =
 
 export default orderSlice.reducer;
 
-export const getAllAccessLevels = () => async (dispatch: Dispatch) => {
+export const getAllOrdersData = () => async (dispatch: Dispatch) => {
   dispatch(getAllOrderInProgress());
   try {
     const response = await OrderService.getAllOrders();
-    const data = response?.data?.accessLevels;
-
+    console.log("Response data", response);
+    const data = response?.data;
     dispatch(getAllOrderSuccess(data));
   } catch (error: any) {
     const errorDetails = error.response;
