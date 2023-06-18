@@ -1,6 +1,5 @@
 import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit";
 import * as MenuService from "../services/Menu";
-import { ordersData } from "../../../model/Order";
 
 interface AccessLevelState {
   inProgress: boolean;
