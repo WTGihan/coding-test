@@ -1,6 +1,4 @@
 import db from "../models";
-import * as MenuSchema from "../schemas/menu";
-import { validateSchema } from "../util/schema";
 
 const Menu = db.Menu;
 const Dish = db.Dish;
@@ -8,7 +6,13 @@ const Rate = db.Rate;
 
 export const findMenu = async (req: any, res: any) => {
   try {
-    const menuResult = await Menu.findAll();
+    const { resturant_id } = req.query;
+    if (!resturant_id) {
+      return res.status(400).send({ message: "Missing restaurant ID" });
+    }
+    const menuResult = await Menu.findAll({
+      where: { resturant_id: resturant_id },
+    });
     res.status(200).send(menuResult);
   } catch (error: any) {
     res.status(500).send({

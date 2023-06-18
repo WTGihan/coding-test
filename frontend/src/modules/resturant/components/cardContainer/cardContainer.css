@@ -1,0 +1,65 @@
+.card-container {
+  width: 50%;
+  flex-basis: calc(45%);
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #00000014;
+
+  .ant-card-body {
+    padding: 16px;
+  }
+
+  .dish-card-container {
+    display: flex;
+    flex-direction: row;
+
+    .dish-card-description {
+      width: 60%;
+
+      .dish-card-description-title {
+        color: #2e3333;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .dish-card-description-product-description {
+        color: #585c5c;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .dish-card-description-product-price {
+        color: #585c5c;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        padding-top: 4px;
+        margin: 0;
+      }
+    }
+
+    .dish-card-img {
+      width: 40%;
+      background-size: cover;
+      display: flex;
+      justify-content: end;
+
+      .ant-image-mask {
+        display: none;
+      }
+    }
+  }
+}
+
+.card-container:hover {
+  box-shadow: 0 22px 24px 0 #00000014;
+}

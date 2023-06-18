@@ -1,0 +1,86 @@
+.auth-form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 64px 16px;
+
+  .auth-form-container-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .auth-form-title {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 700;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: #2e3333;
+      padding-bottom: 24px;
+    }
+
+    .auth-form-input-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+
+      .auth-form-input-label {
+        color: #2e3333;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 400;
+        padding-bottom: 8px;
+      }
+
+      .auth-form-input {
+        height: 48px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "IBM Plex Sans", sans-serif;
+        caret-color: #00ccbc;
+        padding: 12px 16px;
+        border: 1px solid #e8ebeb;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05), inset 0 0 0 100px #fff;
+        transition-property: box-shadow, -webkit-box-shadow;
+        transition-duration: 0.15s;
+        transition-timing-function: ease-out;
+      }
+    }
+
+    .auth-form-button {
+      transition-property: box-shadow;
+      transition-duration: 0.15s;
+      transition-timing-function: ease-out;
+      border-radius: 4px;
+      height: 48px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: "IBM Plex Sans", sans-serif;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+
+    .auth-form-login-button {
+      background: #00ccbc;
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    .auth-form-signup-button {
+      line-height: 22px;
+      border: 1px solid #e8ebeb;
+      background-color: #fff;
+      color: #00b8a9;
+      font-weight: 400;
+    }
+  }
+}

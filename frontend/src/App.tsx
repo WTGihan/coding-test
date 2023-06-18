@@ -1,13 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import OrderPage from "./modules/order/pages/OrderPage";
+import Resturant from "./modules/resturant/pages/resturant/Resturant";
+import Auth from "./modules/auth/pages/auth/Auth";
+import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
+
 import "./App.css";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<OrderPage />} />
+        <Route path="/" element={<Auth />} />
+        <Route
+          path="/resturant"
+          element={<ProtectedRoute component={<Resturant />} />}
+        />
       </Routes>
     </Router>
   );

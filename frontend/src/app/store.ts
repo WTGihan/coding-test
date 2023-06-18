@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import OrderRootReducer from "../modules/order/slices/orderRootSlice";
+import ResturantRootReducer from "../modules/resturant/slices/root";
+import AuthRootReducer from "../modules/auth/slices/root";
 
 export const store = configureStore({
   reducer: {
-    order: OrderRootReducer,
+    resturant: ResturantRootReducer,
+    auth: AuthRootReducer,
   },
   devTools: process.env.REACT_APP_STAGE === "dev",
 });
