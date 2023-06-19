@@ -3,3 +3,4 @@ export const AUTH_TYPE = {
   LOGIN: "login",
   SIGNUP: "signup",
 };
+export const TOKEN_EXPIRED = "jwt expired";

@@ -1,7 +1,7 @@
 import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit";
 import * as MenuService from "../services/Menu";
 
-interface AccessLevelState {
+interface MenuState {
   inProgress: boolean;
   error: any;
   actionType: string;
@@ -9,7 +9,7 @@ interface AccessLevelState {
   menuWithDishes: any[];
 }
 
-const initialState: AccessLevelState = {
+const initialState: MenuState = {
   inProgress: false,
   error: null,
   actionType: "",
@@ -75,6 +75,7 @@ export const getAllMenu = () => async (dispatch: Dispatch) => {
     dispatch(getAllMenuSuccess(data));
   } catch (error: any) {
     const errorDetails = error.response;
+    console.log("Error", error.response.data.message);
     dispatch(getAllMenuFailed(errorDetails));
   }
 };

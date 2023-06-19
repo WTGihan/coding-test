@@ -65,6 +65,7 @@ For setup project follow these steps:
             - app/
             - assets/
             - components/
+            - constants/
             - hooks/
             - model/
             - modules/

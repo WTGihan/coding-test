@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Input, Button } from "antd";
 import Link from "antd/es/typography/Link";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
 import { ReactComponent as SignUpLoginIcon } from "../../assets/signUpLogin.svg";
 
 import "./header.css";
+import TokenService from "../../services/Token";
 
 interface HeaderProps {
   searchIsAvailable?: boolean;
@@ -15,6 +16,17 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ searchIsAvailable }) => {
   const navigate = useNavigate();
+  const [userLoggingStatus, setUserLoggingStatus] = useState(false);
+
+  useEffect(() => {
+    const userToken = TokenService.getUser();
+
+    if (userToken) {
+      setUserLoggingStatus(true);
+    }
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="header-container" id="header">
       <div
@@ -41,16 +53,18 @@ const Header: React.FC<HeaderProps> = ({ searchIsAvailable }) => {
         }`}
       >
         <div className="header-item-three-container">
-          <Button
-            type="primary"
-            shape="round"
-            icon={<SignUpLoginIcon className="header-item-three-icon" />}
-            size={"middle"}
-            className="header-signup-button header-menu-button"
-            onClick={() => navigate("/")}
-          >
-            Sign up or log in
-          </Button>
+          {!userLoggingStatus && (
+            <Button
+              type="primary"
+              shape="round"
+              icon={<SignUpLoginIcon className="header-item-three-icon" />}
+              size={"middle"}
+              className="header-signup-button header-menu-button"
+              onClick={() => navigate("/")}
+            >
+              Sign up or log in
+            </Button>
+          )}
           <Button
             type="primary"
             shape="round"
