@@ -27,6 +27,11 @@ const Header: React.FC<HeaderProps> = ({ searchIsAvailable }) => {
     // eslint-disable-next-line
   }, []);
 
+  const handleLogout = () => {
+    TokenService.removeUser();
+    navigate("/");
+  };
+
   return (
     <div className="header-container" id="header">
       <div
@@ -53,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({ searchIsAvailable }) => {
         }`}
       >
         <div className="header-item-three-container">
-          {!userLoggingStatus && (
+          {!userLoggingStatus ? (
             <Button
               type="primary"
               shape="round"
@@ -64,7 +69,19 @@ const Header: React.FC<HeaderProps> = ({ searchIsAvailable }) => {
             >
               Sign up or log in
             </Button>
+          ) : (
+            <Button
+              type="primary"
+              shape="round"
+              icon={<SignUpLoginIcon className="header-item-three-icon" />}
+              size={"middle"}
+              className="header-signup-button header-menu-button"
+              onClick={handleLogout}
+            >
+              Logout
+            </Button>
           )}
+
           <Button
             type="primary"
             shape="round"
