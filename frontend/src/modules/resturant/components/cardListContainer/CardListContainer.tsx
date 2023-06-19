@@ -18,23 +18,23 @@ const CardListContainer: React.FC<CardListContainerProps> = ({
         {menuWithDishes.map((menuWithDish: any) => (
           <div key={`card_${menuWithDish.id}`} id={menuWithDish.id}>
             {menuWithDish.dishes.length > 0 && (
-              <>
+              <React.Fragment key={`card_conainer${menuWithDish.id}`}>
                 <Typography className="card-list-container-title">
                   {menuWithDish.name}
                 </Typography>
                 <div className="card-list-container-data">
                   {menuWithDish.dishes.map((dish: any) => (
-                    <>
+                    <React.Fragment key={`card_conainer_menu_${dish.id}`}>
                       <CardContainer
                         name={dish.name}
                         description={dish.description}
                         price={dish.price}
                         imageUrl={dish.image_url}
                       />
-                    </>
+                    </React.Fragment>
                   ))}
                 </div>
-              </>
+              </React.Fragment>
             )}
           </div>
         ))}

@@ -36,7 +36,7 @@ instance.interceptors.response.use(
         try {
           const rs = await instance.post("/refresh", {
             refreshToken: TokenService.getLocalRefreshToken(),
-            email: TokenService.getUser()?.email,
+            email: TokenService.getUser()?.email || "",
           });
 
           const { accessToken } = rs.data;

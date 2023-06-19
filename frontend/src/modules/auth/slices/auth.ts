@@ -1,19 +1,20 @@
 import { createSlice, Dispatch, PayloadAction } from "@reduxjs/toolkit";
 import * as AuthService from "../services/Auth";
 import TokenService from "../../../services/Token";
+import { userData } from "../../../model/Auth";
 
 interface AuthState {
   inProgress: boolean;
   error: any;
   actionType: string;
-  user: any;
+  user: userData | {};
 }
 
 const initialState: AuthState = {
   inProgress: false,
   error: null,
   actionType: "",
-  user: [],
+  user: {},
 };
 
 const authSlice = createSlice({
