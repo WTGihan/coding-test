@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "",
+    "password": null,
+    "database": "",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "",
+    "password": null,
+    "database": "",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "define": {
+    "timestamps": true,
+    "underscored": true,
+    "freezeTableName": true,
+    "migrationStorage": "none",
+    "migrationStorageTableName": "sequelize_meta"
+  }
+}

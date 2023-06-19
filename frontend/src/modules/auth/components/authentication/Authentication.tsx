@@ -4,6 +4,8 @@ import { Typography, Button } from "antd";
 import { ReactComponent as FacebookIcon } from "../../../../assets/facebook.svg";
 import { ReactComponent as EmailIcon } from "../../../../assets/email.svg";
 
+import { AUTH_TYPE } from "../../../../constants/auth";
+
 import "./authentication.css";
 
 interface AuthenticationProps {
@@ -45,7 +47,7 @@ const Authentication: React.FC<AuthenticationProps> = ({ onChangeStage }) => {
           icon={<EmailIcon className="auth-email-button-icon" />}
           size={"middle"}
           className="auth-button auth-email-button"
-          onClick={() => onChangeStage("login")}
+          onClick={() => onChangeStage(AUTH_TYPE.LOGIN)}
         >
           Continue with email
         </Button>

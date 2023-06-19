@@ -88,7 +88,13 @@ export const signUp = (userData: any) => async (dispatch: Dispatch) => {
   try {
     const response = await AuthService.signUp(userData);
     const data = response?.data;
-    dispatch(signUpSuccess(data));
+    const responseUserData: any = {
+      id: data?.id,
+      email: data?.email,
+      username: data?.username,
+    };
+    TokenService.setUser(data);
+    dispatch(signUpSuccess(responseUserData));
   } catch (error: any) {
     const errorDetails = error.response;
     dispatch(signUpFailed(errorDetails));
