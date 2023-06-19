@@ -9,31 +9,31 @@ For setup project follow these steps:
   - Node, Typescript
 - ### Setup the backend.
 
-  - Create .env file on root and add data according to .envSample file.
-  - Create config.json file add database data according to config.json.template.
-  - After create above files navigate to backend folder and open the terminal run the following command to install dependencies.
+  - Create a `.env` file in the root directory and populate it with the necessary data, as specified in the `.envSample` file.
+  - Create a `config.json` file and add the required database information based on the provided `config.json.template`.
+  - Once you have created the above files, navigate to the `backend` folder and open the terminal. Run the following command to install the dependencies:
     -       npm install
-  - After complete install dependencies run following command to run migrations in Database.
+  - After the dependencies are installed, execute the following command to run the migrations in the database:
 
-    - First ensure database connect with application using following command to run application in root folder
+    - Ensure that the application is connected to the database by running the following command in the root folder:
       -       npm run dev
-    - After that navigate src folder and run follow command to run migrations files.
+    - Once the application is running, navigate to the `src` folder and execute the following command to run the migration files:
       -       npx sequelize-cli db:migrate
-    - After complete migration run seeds data for your database before run following commands you can modify data according to relations and add the data personal reference.
+    - After the migration is complete, you can populate the database with seed data. Before running the following commands, you can modify the data according to your relationships and personal preferences.
 
       -       npx sequelize-cli db:seed:all
 
-      - You can run individually by run following code
+      - If you prefer to run the seed data individually, use the following command:
         -       npx sequelize-cli db:seed --seed <SeederFileName>
 
-  - Do resave index.ts file to restart the application.
-  - Finally you can access the backend given url with protected way.
+  - Save the `index.ts` file to restart the application.
+  - Finally, you can access the backend via the provided URL in a protected manner.
 
 - ### Setup Frontend
-  - First navigate to frontend folder and run following command to run depedencies for application.
+  - Navigate to the `frontend` folder and run the following command to install the dependencies for the application:
     -       npm install
-  - Create .env file add the data according to sample .envSample file.
-  - After that run the application using following command
+  - Create a `.env` file in the `frontend` folder and populate it with the required data, following the format provided in the `.envSample` file.
+  - Run the application using the following command:
     -       npm run start
 
 ## Folder Architecture
