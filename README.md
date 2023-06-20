@@ -58,7 +58,7 @@ For setup project follow these steps:
         - .gitingore
         - node_modules/
 
-### Frotend
+### Frontend
 
     - frontend/
         - src/
